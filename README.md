@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏛️ O que fazer em Patos de Minas / MG?
 
-## Getting Started
+Um portal moderno e dinâmico para descoberta de eventos na cidade de Patos de Minas. Construído com foco em performance, estética premium e facilidade de uso.
 
-First, run the development server:
+![Preview do Projeto](https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?q=80&w=2070&auto=format&fit=crop)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tecnologias
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Este projeto utiliza o que há de mais moderno no ecossistema Web:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
+- **Linguagem**: [TypeScript](https://www.typescriptlang.org/)
+- **Estilização**: [Tailwind CSS](https://tailwindcss.com/)
+- **Banco de Dados & Auth**: [Supabase](https://supabase.com/)
+- **Componentes UI**: Shadcn UI & Lucide Icons
+- **Animações**: Framer Motion
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Funcionalidades
 
-## Learn More
+- 🔍 **Busca Inteligente**: Encontre eventos por título ou descrição em tempo real.
+- 📅 **Listagem de Eventos Ativos**: Visualize o que está acontecendo na cidade agora ou em breve.
+- ⏳ **Eventos Expirados**: Histórico de eventos que já ocorreram.
+- 🛡️ **Painel de Curadoria**: Interface administrativa para aprovação e gestão de eventos pendentes.
+- 📱 **Totalmente Responsivo**: Experiência otimizada para Desktop, Tablets e Mobile.
+- 🎨 **Design Premium**: Glassmorphism, tipografia moderna e transições fluidas.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Como rodar o projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/renatofaria-ia/oqfazerempatosdeminas.git
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Configure as variáveis de ambiente**:
+   Crie um arquivo `.env.local` com suas credenciais do Supabase:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=seu_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_chave_anon
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Inicie o servidor de desenvolvimento**:
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Desenvolvido com ❤️ para a comunidade de Patos de Minas.
