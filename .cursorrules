@@ -1,0 +1,17 @@
+# oqfazerempatosdeminas - Rules of Engagement
+
+## Mandatory Context Consultation
+Before starting ANY task that involves architecture, UI/UX changes, or feature implementation, you MUST:
+1.  **Read @directives.md**: To ensure the "Premium Tech" aesthetic and technical stack (Next.js/Supabase/RLS) are followed.
+2.  **Read @lessons_learnings.md**: To avoid repeating past mistakes (e.g., WordPress-related logic or PRD drift).
+3.  **Read @PRD_Portal_Eventos_Patos_de_Minas.md**: To verify the scope and taxonomies.
+
+## Mandatory Update Routine
+At the end of every session or after solving a complex bug/implementing a new pattern:
+1.  **Update @lessons_learnings.md**: Document the problem, the solution, and the "why".
+2.  **Update @directives.md**: If a new technical pattern or UI standard is established.
+3.  **Audit RLS**: Always verify Row Level Security when creating/altering tables.
+
+## Communication Style
+- Refer to these documents in your responses (e.g., "Following the @directives.md, I will use...").
+- If the USER asks for something that contradicts @directives.md or @PRD_Portal_Eventos_Patos_de_Minas.md, flag it immediately.

@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --primary: #2d6a4f;
+  --primary-foreground: #ffffff;
+  --secondary: #f5a623;
+  --secondary-foreground: #1a1a1a;
+  
+  /* Neutral Palette - Cream/Warm White as per PRD */
+  --background: #fdfcf9; /* Slightly brighter cream for more pop */
+  --foreground: #0a0a0a; /* True black/dark grey for maximum contrast */
+  
+  /* Surface Layers */
+  --surface: #ffffff;
+  --surface-2: #f4f2ea;
+  --border: rgba(0, 0, 0, 0.12); /* Increased from 0.08 */
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  
+  /* Custom Animations & Radius */
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  
+  --animate-float: float 3s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #f7f6f2;
+    
+    --surface: #1a1a1a;
+    --surface-2: #242424;
+    --border: rgba(255, 255, 255, 0.1);
+    
+    --glass-bg: rgba(18, 18, 18, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-[var(--border)] outline-none transition-colors duration-200;
+  }
+  
+  body {
+    @apply bg-background text-foreground selection:bg-primary selection:text-white antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-balance;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-[var(--glass-bg)] backdrop-blur-md border border-[var(--glass-border)] shadow-xl;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary;
+  }
+
+  .admin-input {
+    @apply w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl px-5 py-3.5 outline-none focus:border-primary/50 focus:bg-black/10 dark:focus:bg-white/10 transition-all font-medium text-sm text-foreground;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-white/20;
+  }
+}
